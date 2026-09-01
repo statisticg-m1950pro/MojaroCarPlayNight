@@ -1,0 +1,16 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.monjaro.carplaynightv2'
+    compileSdk 35
+
+    defaultConfig {
+        applicationId "com.monjaro.carplaynightv2"
+        minSdk 23
+        targetSdk 28
+        versionCode 4
+        versionName "4.0"
+    }
+}

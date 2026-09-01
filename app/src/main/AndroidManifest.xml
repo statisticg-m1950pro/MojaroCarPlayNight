@@ -1,0 +1,38 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED"/>
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <uses-permission android:name="android.permission.REQUEST_IGNORE_BATTERY_OPTIMIZATIONS"/>
+    <uses-feature android:name="android.hardware.usb.host" android:required="false"/>
+
+    <application android:allowBackup="false"
+        android:label="Monjaro CarPlay Night V4 Root"
+        android:theme="@style/AppTheme"
+        android:directBootAware="true">
+
+        <activity android:name=".MainActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <service android:name=".ThemeWatchService"
+            android:enabled="true" android:exported="false"
+            android:stopWithTask="false" android:directBootAware="true"/>
+
+        <receiver android:name=".BootReceiver"
+            android:enabled="true" android:exported="true" android:directBootAware="true">
+            <intent-filter android:priority="1000">
+                <action android:name="android.intent.action.BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED"/>
+                <action android:name="android.intent.action.USER_UNLOCKED"/>
+                <action android:name="android.intent.action.MY_PACKAGE_REPLACED"/>
+            </intent-filter>
+        </receiver>
+
+        <receiver android:name=".WatchdogReceiver"
+            android:enabled="true" android:exported="false" android:directBootAware="true"/>
+        <receiver android:name=".UsbPermissionReceiver" android:exported="false"/>
+    </application>
+</manifest>

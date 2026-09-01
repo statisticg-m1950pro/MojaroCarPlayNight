@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+ android:layout_width="match_parent" android:layout_height="match_parent">
+ <LinearLayout android:orientation="vertical" android:padding="24dp"
+  android:layout_width="match_parent" android:layout_height="wrap_content">
+  <TextView android:text="Monjaro CarPlay Night V4 ROOT"
+   android:textStyle="bold" android:textSize="25sp"
+   android:layout_width="wrap_content" android:layout_height="wrap_content"/>
+  <TextView android:id="@+id/status" android:textSize="16sp"
+   android:paddingTop="16dp" android:layout_width="match_parent"
+   android:layout_height="wrap_content"/>
+  <Switch android:id="@+id/enabled" android:text="Автоматическое переключение"
+   android:textSize="18sp" android:checked="true"
+   android:layout_width="match_parent" android:layout_height="wrap_content"/>
+  <Switch android:id="@+id/invert" android:text="Инвертировать 0/1"
+   android:textSize="18sp" android:layout_width="match_parent"
+   android:layout_height="wrap_content"/>
+  <Button android:id="@+id/root" android:text="Активировать ROOT-движок"
+   android:layout_width="match_parent" android:layout_height="wrap_content"/>
+  <Button android:id="@+id/requestUsb" android:text="Запросить доступ к Carlinkit"
+   android:layout_width="match_parent" android:layout_height="wrap_content"/>
+  <Button android:id="@+id/testNight" android:text="ТЕСТ: НОЧЬ"
+   android:layout_width="match_parent" android:layout_height="wrap_content"/>
+  <Button android:id="@+id/testDay" android:text="ТЕСТ: ДЕНЬ"
+   android:layout_width="match_parent" android:layout_height="wrap_content"/>
+  <Button android:id="@+id/diagnostics" android:text="ROOT диагностика AutoKit"
+   android:layout_width="match_parent" android:layout_height="wrap_content"/>
+  <TextView android:id="@+id/log" android:textSize="13sp"
+   android:paddingTop="14dp" android:layout_width="match_parent"
+   android:layout_height="wrap_content"/>
+ </LinearLayout>
+</ScrollView>
